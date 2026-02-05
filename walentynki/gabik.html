@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walentynka 💖</title>
+  <style>
+    /* Reset i podstawowe ustawienia */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #ffcce6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff3366;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 120px;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    #yes {
+      background-color: #ff3366;
+      color: white;
+    }
+    #no {
+      background-color: #ccc;
+      color: #555;
+      cursor: not-allowed;
+    }
+
+    /* Responsywność */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      button {
+        width: 100px;
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Czy zostaniesz moją walentynką? 💖</h1>
+  <div>
+    <button id="yes">Tak</button>
+    <button id="no">Nie</button>
+  </div>
+
+  <script>
+    document.getElementById('yes').addEventListener('click', () => {
+      window.location.href = 'gratulacje.html';
+    });
+
+    document.getElementById('no').addEventListener('click', () => {
+      alert("Nie możesz kliknąć 'Nie' 😉");
+    });
+  </script>
+</body>
+</html>
